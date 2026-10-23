@@ -1,0 +1,54 @@
+{
+  "version": "2026.1.0",
+  "rules": [
+    {
+      "id": "ANOM_DUP_HASH",
+      "name": "Exact Document Duplicate Detection",
+      "category": "DUPLICATE_FILES",
+      "severity": "CRITICAL",
+      "description": "Calculates SHA-256 fingerprint across all uploaded application documents to detect identical files submitted under differing document types or across other institutional applications.",
+      "default_penalty": 25.0
+    },
+    {
+      "id": "ANOM_PERCEPTUAL_IMG_DUP",
+      "name": "Perceptual Image Hash Match",
+      "category": "DUPLICATE_IMAGES",
+      "severity": "HIGH",
+      "threshold_hamming_distance": 5,
+      "description": "Uses dHash / pHash algorithms to detect rotated, re-compressed, or cropped copies of the same physical campus infrastructure submitted across multiple claims.",
+      "default_penalty": 20.0
+    },
+    {
+      "id": "ANOM_META_INCONSISTENCY",
+      "name": "PDF Metadata Creation Date Inconsistency",
+      "category": "METADATA_ANOMALY",
+      "severity": "MEDIUM",
+      "description": "Detects if document internal creation timestamp postdates the declared notary execution date or if software editing tools (e.g. Photoshop, PDF edit injectors) are detected in producer metadata.",
+      "default_penalty": 15.0
+    },
+    {
+      "id": "ANOM_IDENTIFIER_CONFLICT",
+      "name": "Identifier / Registration Conflict",
+      "category": "IDENTIFIER_CONFLICT",
+      "severity": "HIGH",
+      "description": "Flags discrepancies between registration numbers on certificates vs numbers registered in AICTE master records.",
+      "default_penalty": 20.0
+    },
+    {
+      "id": "ANOM_DATE_ORDER_VIOLATION",
+      "name": "Chronological Sequence Violation",
+      "category": "DATE_INCONSISTENCY",
+      "severity": "HIGH",
+      "description": "Verifies that document issue dates, inspection dates, and notary attestations follow strict valid chronological sequence.",
+      "default_penalty": 18.0
+    },
+    {
+      "id": "ANOM_IMAGE_SPLICING_INDICATOR",
+      "name": "Error Level Analysis & Compression Edge Anomaly",
+      "category": "MANIPULATION_INDICATOR",
+      "severity": "MEDIUM",
+      "description": "Checks for local variance in JPEG compression artifacts around critical text blocks (e.g., area measurements, registration seals, dates).",
+      "default_penalty": 15.0
+    }
+  ]
+}

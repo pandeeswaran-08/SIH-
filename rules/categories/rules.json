@@ -1,0 +1,51 @@
+{
+  "version": "2026.1.0",
+  "effective_date": "2026-01-01",
+  "categories": [
+    {
+      "id": "ENGINEERING_TECH",
+      "name": "Engineering & Technology",
+      "code": "ENG_TECH",
+      "description": "Institutions offering undergraduate, postgraduate, or diploma programs in Engineering and Technology.",
+      "keywords": ["engineering", "technology", "b.tech", "m.tech", "polytechnic", "computer science", "mechanical", "electrical", "civil"],
+      "default_checklist_id": "CHK_ENG_2026",
+      "mandatory_doc_types": ["LAND_OWNERSHIP", "AFFILIATION_CERT", "BUILDING_PLAN", "FACULTY_LIST", "FIRE_SAFETY", "BANK_GUARANTEE"]
+    },
+    {
+      "id": "MANAGEMENT",
+      "name": "Management Studies",
+      "code": "MGMT",
+      "description": "Institutions offering MBA, PGDM, or executive management programs.",
+      "keywords": ["management", "business", "mba", "pgdm", "bba"],
+      "default_checklist_id": "CHK_MGMT_2026",
+      "mandatory_doc_types": ["LAND_OWNERSHIP", "AFFILIATION_CERT", "BUILDING_PLAN", "FACULTY_LIST", "FIRE_SAFETY", "CORPUS_FUND"]
+    },
+    {
+      "id": "PHARMACY",
+      "name": "Pharmacy Education",
+      "code": "PHARM",
+      "description": "Institutions providing B.Pharm, M.Pharm, or Pharm.D courses.",
+      "keywords": ["pharmacy", "pharm.d", "b.pharm", "m.pharm", "pharmaceutical"],
+      "default_checklist_id": "CHK_PHARM_2026",
+      "mandatory_doc_types": ["LAND_OWNERSHIP", "AFFILIATION_CERT", "PCI_APPROVAL", "BUILDING_PLAN", "LAB_INVENTORY", "FACULTY_LIST", "FIRE_SAFETY"]
+    },
+    {
+      "id": "ARCHITECTURE",
+      "name": "Architecture & Planning",
+      "code": "ARCH",
+      "description": "Colleges running B.Arch, M.Arch, and Town Planning curriculums.",
+      "keywords": ["architecture", "b.arch", "planning", "town planning", "m.arch"],
+      "default_checklist_id": "CHK_ARCH_2026",
+      "mandatory_doc_types": ["LAND_OWNERSHIP", "AFFILIATION_CERT", "COA_REGISTRATION", "BUILDING_PLAN", "FACULTY_LIST", "FIRE_SAFETY"]
+    },
+    {
+      "id": "APPLIED_ARTS_CRAFTS",
+      "name": "Applied Arts and Crafts",
+      "code": "ARTS_CRAFT",
+      "description": "Institutions dedicated to fine arts, design, fashion, and crafts.",
+      "keywords": ["applied arts", "fine arts", "design", "crafts", "fashion"],
+      "default_checklist_id": "CHK_ARTS_2026",
+      "mandatory_doc_types": ["LAND_OWNERSHIP", "AFFILIATION_CERT", "BUILDING_PLAN", "STUDIO_INVENTORY", "FACULTY_LIST", "FIRE_SAFETY"]
+    }
+  ]
+}

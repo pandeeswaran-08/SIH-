@@ -1,0 +1,46 @@
+{
+  "version": "2026.1.0",
+  "categories": [
+    {
+      "key": "CLASSROOM",
+      "name": "Classroom / Smart Lecture Hall",
+      "required_elements": ["chairs_or_desks", "blackboard_or_screen", "projector_or_podium"],
+      "min_confidence": 0.50,
+      "density_norm_sqm_per_student": 1.2
+    },
+    {
+      "key": "LABORATORY",
+      "name": "Specialized Science / Engineering Laboratory",
+      "required_elements": ["workbenches", "laboratory_equipment", "safety_apparatus"],
+      "min_confidence": 0.50,
+      "mandatory_safety": ["fire_extinguisher", "first_aid_kit"]
+    },
+    {
+      "key": "LIBRARY",
+      "name": "Central / Departmental Library",
+      "required_elements": ["bookshelves", "reading_tables", "catalog_workstation"],
+      "min_confidence": 0.50,
+      "minimum_book_shelves": 4
+    },
+    {
+      "key": "COMPUTER_CENTER",
+      "name": "Computing & Networking Center",
+      "required_elements": ["monitors", "system_units", "networking_rack"],
+      "min_confidence": 0.50,
+      "minimum_workstations_per_lab": 20
+    },
+    {
+      "key": "FIRE_SAFETY_EQUIPMENT",
+      "name": "Fire Fighting & Safety Installations",
+      "required_elements": ["fire_extinguisher", "hose_reel", "alarm_call_point"],
+      "min_confidence": 0.55
+    }
+  ],
+  "image_quality": {
+    "min_resolution_width": 640,
+    "min_resolution_height": 480,
+    "blur_laplacian_var_threshold": 100.0,
+    "min_brightness": 30.0,
+    "max_brightness": 240.0
+  }
+}

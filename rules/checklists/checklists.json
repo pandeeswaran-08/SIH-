@@ -1,0 +1,150 @@
+{
+  "version": "2026.1.0",
+  "academic_year": "2026-2027",
+  "templates": {
+    "CHK_ENG_2026": {
+      "category": "ENGINEERING_TECH",
+      "title": "AICTE Approval Process Handbook Checklist - Engineering & Technology",
+      "items": [
+        {
+          "code": "CHK_ENG_01",
+          "title": "Clear Land Title Deed / 30-Year Registered Lease",
+          "doc_type": "LAND_OWNERSHIP",
+          "is_mandatory": true,
+          "min_acres_metro": 2.5,
+          "min_acres_rural": 7.5,
+          "description": "Clear title deed registered with sub-registrar or 30-year unencumbered lease with local municipal conversion."
+        },
+        {
+          "code": "CHK_ENG_02",
+          "title": "University Affiliation Letter / NOC",
+          "doc_type": "AFFILIATION_CERT",
+          "is_mandatory": true,
+          "validity_years": 1,
+          "description": "Valid provisional or permanent affiliation letter issued by the designated affiliating state/central university."
+        },
+        {
+          "code": "CHK_ENG_03",
+          "title": "Approved Building Plan with Competent Authority Sign-off",
+          "doc_type": "BUILDING_PLAN",
+          "is_mandatory": true,
+          "min_builtup_sqm": 4500,
+          "description": "Building layout sanctions certified by Town & Country Planning / Municipal Corporation / DTCP."
+        },
+        {
+          "code": "CHK_ENG_04",
+          "title": "Fire & Life Safety Certificate",
+          "doc_type": "FIRE_SAFETY",
+          "is_mandatory": true,
+          "must_not_be_expired": true,
+          "description": "NOC from State Disaster Response and Fire Services Department with active validity period."
+        },
+        {
+          "code": "CHK_ENG_05",
+          "title": "Cadre Ratio and Faculty Roster",
+          "doc_type": "FACULTY_LIST",
+          "is_mandatory": true,
+          "faculty_student_ratio": "1:20",
+          "description": "Complete faculty list signed by the Principal with PhD/PG details conforming to AICTE cadre ratios."
+        },
+        {
+          "code": "CHK_ENG_06",
+          "title": "Barrier-Free Built Environment & PwD Facilities",
+          "doc_type": "PWD_COMPLIANCE",
+          "is_mandatory": false,
+          "description": "Architect certificate validating ramps, lifts, and accessible restrooms for persons with disabilities."
+        },
+        {
+          "code": "CHK_ENG_07",
+          "title": "Bank Guarantee / Joint Fixed Deposit",
+          "doc_type": "BANK_GUARANTEE",
+          "is_mandatory": true,
+          "min_amount_inr": 3500000,
+          "description": "Joint FDR in the name of Regional Officer, AICTE and Chairman/Secretary of the applicant trust."
+        }
+      ]
+    },
+    "CHK_MGMT_2026": {
+      "category": "MANAGEMENT",
+      "title": "AICTE Approval Process Handbook Checklist - Management Studies",
+      "items": [
+        {
+          "code": "CHK_MGMT_01",
+          "title": "Land Title Deed / Unencumbered Possession",
+          "doc_type": "LAND_OWNERSHIP",
+          "is_mandatory": true,
+          "min_acres_metro": 1.0,
+          "min_acres_rural": 3.0,
+          "description": "Registered deed establishing undisputed possession of designated academic plot."
+        },
+        {
+          "code": "CHK_MGMT_02",
+          "title": "University Affiliation / State NOC",
+          "doc_type": "AFFILIATION_CERT",
+          "is_mandatory": true,
+          "validity_years": 1,
+          "description": "State Higher Education Department NOC and University affiliation approval."
+        },
+        {
+          "code": "CHK_MGMT_03",
+          "title": "Sanctioned Master Plan & Built-up Area",
+          "doc_type": "BUILDING_PLAN",
+          "is_mandatory": true,
+          "min_builtup_sqm": 2500,
+          "description": "Approved architectural master plan detailing classrooms, seminar halls, and computer center."
+        },
+        {
+          "code": "CHK_MGMT_04",
+          "title": "Fire Safety Certificate",
+          "doc_type": "FIRE_SAFETY",
+          "is_mandatory": true,
+          "must_not_be_expired": true,
+          "description": "Valid municipal fire department compliance certificate."
+        },
+        {
+          "code": "CHK_MGMT_05",
+          "title": "Core Faculty Roster with Cadre Ratio",
+          "doc_type": "FACULTY_LIST",
+          "is_mandatory": true,
+          "faculty_student_ratio": "1:20",
+          "description": "List of core and visiting faculty compliant with AICTE norms."
+        }
+      ]
+    },
+    "CHK_PHARM_2026": {
+      "category": "PHARMACY",
+      "title": "AICTE Approval Process Handbook Checklist - Pharmacy",
+      "items": [
+        {
+          "code": "CHK_PHARM_01",
+          "title": "Land Title and Continuous Campus Deed",
+          "doc_type": "LAND_OWNERSHIP",
+          "is_mandatory": true,
+          "min_acres_metro": 2.0,
+          "description": "Deed showing contiguous land without public thoroughfare."
+        },
+        {
+          "code": "CHK_PHARM_02",
+          "title": "Pharmacy Council of India (PCI) Endorsement",
+          "doc_type": "PCI_APPROVAL",
+          "is_mandatory": true,
+          "description": "Letter of permission or standard inspection report from PCI."
+        },
+        {
+          "code": "CHK_PHARM_03",
+          "title": "Pharmaceutics & Chemistry Lab Inventory",
+          "doc_type": "LAB_INVENTORY",
+          "is_mandatory": true,
+          "description": "Detailed equipment inventory verifying pharmaceutical machine rooms and analysis apparatus."
+        },
+        {
+          "code": "CHK_PHARM_04",
+          "title": "Fire and Hazard Safety NOC",
+          "doc_type": "FIRE_SAFETY",
+          "is_mandatory": true,
+          "description": "Safety clearance specifically verifying chemical storage ventilation and emergency showers."
+        }
+      ]
+    }
+  }
+}

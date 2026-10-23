@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: aicte_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: aicte_validation
+      POSTGRES_USER: aicte_user
+      POSTGRES_PASSWORD: aicte_secure_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aicte_user -d aicte_validation"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  minio:
+    image: minio/minio:RELEASE.2023-09-07T02-05-02Z
+    container_name: aicte_minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: aicte_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://aicte_user:aicte_secure_pass@postgres:5432/aicte_validation
+      - STORAGE_BACKEND=MINIO
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_BUCKET_NAME=aicte-documents
+      - INFERENCE_DEVICE=cpu
+      - MAX_CONCURRENT_VALIDATION_JOBS=2
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_started
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: aicte_frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  minio_data:

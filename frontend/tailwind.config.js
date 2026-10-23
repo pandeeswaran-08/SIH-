@@ -25,9 +25,10 @@ export default {
         }
       },
       fontFamily: {
-        serif: ['"Times New Roman"', 'Times', '"Source Serif 4"', 'Georgia', 'Cambria', 'serif'],
-        display: ['"Playfair Display"', '"Times New Roman"', 'Times', 'Georgia', 'serif'],
-        sans: ['"Times New Roman"', 'Times', 'Georgia', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       boxShadow: {
         'card': '0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.06)',

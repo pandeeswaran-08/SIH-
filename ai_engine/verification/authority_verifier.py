@@ -63,7 +63,8 @@ class AuthorityVerifier:
                         "mode": "SYNTHETIC_DEMO",
                         "error": "Required document missing from application; query cannot be formulated."
                     },
-                    "notes": "Missing document prevents external registry lookup."
+                    "notes": "Missing document prevents external registry lookup.",
+                    "verified_at": None
                 }
                 verification_records.append(record)
                 continue

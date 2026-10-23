@@ -271,13 +271,13 @@ class ValidationOrchestrator:
             for ar in auth_records:
                 avr = AuthorityVerificationRecord(
                     application_id=application_id,
-                    authority_name=ar["authority_name"],
-                    query_identifier=ar["query_identifier"],
-                    status=ar["status"],
-                    reference_number=ar["reference_number"],
-                    response_payload_json=json.dumps(ar["response_payload"]),
-                    notes=ar["notes"],
-                    verified_at=ar["verified_at"]
+                    authority_name=ar.get("authority_name", "Unknown Authority"),
+                    query_identifier=ar.get("query_identifier", "N/A"),
+                    status=ar.get("status", "NOT_VERIFIED"),
+                    reference_number=ar.get("reference_number"),
+                    response_payload_json=json.dumps(ar.get("response_payload", {})),
+                    notes=ar.get("notes", ""),
+                    verified_at=ar.get("verified_at")
                 )
                 db.add(avr)
             db.commit()
@@ -332,13 +332,13 @@ class ValidationOrchestrator:
             for c in contributions:
                 rsc = RiskScoreContribution(
                     validation_run_id=val_run.id,
-                    rule_id=c["rule_id"],
-                    rule_version=c["rule_version"],
-                    category=c["category"],
-                    weight=c["weight"],
-                    contribution=c["contribution"],
-                    explanation=c["explanation"],
-                    evidence_ref=c["evidence_ref"]
+                    rule_id=c.get("rule_id", "GENERIC_RULE"),
+                    rule_version=c.get("rule_version", "1.0"),
+                    category=c.get("category", "GENERAL"),
+                    weight=c.get("weight", 0.0),
+                    contribution=c.get("contribution", 0.0),
+                    explanation=c.get("explanation", ""),
+                    evidence_ref=c.get("evidence_ref")
                 )
                 db.add(rsc)
             db.commit()
